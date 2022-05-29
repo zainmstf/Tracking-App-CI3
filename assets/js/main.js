@@ -185,20 +185,6 @@
 	}
 
 	/**
-	 * Initiate glightbox
-	 */
-	const glightbox = GLightbox({
-		selector: ".glightbox",
-	});
-
-	/**
-	 * Initiate Gallery Lightbox
-	 */
-	const galelryLightbox = GLightbox({
-		selector: ".galelry-lightbox",
-	});
-
-	/**
 	 * Testimonials slider
 	 */
 	new Swiper(".testimonials-slider", {
@@ -227,34 +213,16 @@
 		},
 	});
 })();
-
-$(document).on("click", 'a[href^="#"]', function (event) {
-	event.preventDefault();
-
-	$("html, body").animate(
-		{
-			scrollTop: $($.attr(this, "href")).offset().top - 80,
-		},
-		800
-	);
-});
-const selector = "#navbar .togactive";
-const dropdown = "#navbar dropdown.togactive";
-
-$(selector).on("click", function () {
-	$(selector).removeClass("active");
-	$(this).addClass("active");
-});
-
 /**
  * Search Track order
  */
 function SearchAjax() {
+	const base_url = window.location.pathname;
 	let value = $("#billcode_list").val();
 	$.ajax({
 		method: "POST",
 		dataType: "json",
-		url: "http://localhost/baru/C_beranda/getDataFromAjx",
+		url: `${base_url}/Home/getDataFromAjx`,
 		data: {
 			input_ajx: value,
 		},
@@ -271,7 +239,6 @@ function SearchAjax() {
 				}
 				return rupiah;
 			}
-			console.log(result);
 			if (result == "") {
 				let isivalue = ` <div class="alert alert-danger alert-dismissible fade show mt-4 text-cente alert-data-nf" role="alert">
 				<strong>Data tidak ditemukan!</strong> Resi yang anda masukkan salah.
@@ -366,7 +333,7 @@ function SearchAjax() {
 										<td>: ${result[i].telp_penerima}</td>
 										</tr>
 										<tr>
-										<td> Asal</td>
+										<td> Tujuan</td>
 										<td>: ${result[i].tujuan}</td>
 										</tr>
 										<tr>
@@ -395,7 +362,7 @@ function SearchAjax() {
 											<td>: ${result[i].nama_barang}</td>
 											</tr>
 											<tr>
-											<td> Jenis Paket</td>
+											<td> Jenis Barang</td>
 											<td>: ${result[i].jenis_paket} </td>
 											</tr>
 											<tr>

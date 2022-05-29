@@ -1,0 +1,210 @@
+.detailOrder .detail {
+	background: rgb(255, 255, 255);
+	font-weight: 500;
+	opacity: 0.8;
+	color: #342f28;
+}
+.detailOrder .detail ul {
+	padding: 0;
+	list-style: none;
+}
+.detailOrder .detail li + li {
+	margin-top: 15px;
+}
+.detailOrder .detail li {
+	padding: 20px;
+	background: #fff;
+	border-radius: 4px;
+	position: relative;
+}
+.detailOrder .detail a {
+	display: block;
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	padding: 0 30px;
+	outline: none;
+	cursor: pointer;
+	border-bottom: 1px solid #1977cc;
+	padding-bottom: 0.5em;
+	text-decoration: none;
+}
+.detailOrder .detail .icon-help {
+	font-size: 24px;
+	position: absolute;
+	right: 0;
+	left: 20px;
+	color: #76b5ee;
+}
+.detailOrder .detail .icon-show,
+.detailOrder .detail .icon-close {
+	font-size: 24px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.detailOrder .detail p {
+	margin-bottom: 0;
+	padding: 10px 0 0 0;
+}
+.detailOrder .detail .icon-show {
+	display: none;
+}
+.detailOrder .detail a.collapsed {
+	color: #343a40;
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+.detailOrder .detail a.collapsed:hover {
+	color: #1977cc;
+}
+.detailOrder .detail a.collapsed .icon-show {
+	display: inline-block;
+}
+.detailOrder .detail a.collapsed .icon-close {
+	display: none;
+}
+.table-striped {
+	font-family: "Poppins", sans-serif;
+	color: #111;
+}
+.bill_state_img_box {
+	text-align: center;
+	margin-top: 4em;
+	margin-bottom: 5em;
+}
+.bill_state_listing {
+	width: 100%;
+	max-width: 1350px;
+}
+.bill_state_listimg .bill_state_img {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.disn_line {
+	width: 17%;
+	border-bottom: 2px #333 dashed;
+}
+.disn_line {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	letter-spacing: -4px;
+}
+.bill_state_img {
+	position: relative;
+}
+i.bx-border-circle.icon-ship {
+	color: #2c4964;
+	border-color: #2c4964;
+	vertical-align: middle;
+}
+.bill_state_img span {
+	color: #747474;
+	font-size: 16px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 300%;
+	letter-spacing: 0;
+	line-height: 1.2;
+}
+
+.modal-header {
+	border-bottom: none !important;
+}
+.modal-footer {
+	padding: 2em 0;
+}
+#detailOrder {
+	padding: 0 !important;
+}
+.dash-line {
+	border-bottom: dashed 2px #cfcfcf;
+	height: 0;
+}
+.freight-box {
+	margin-top: 40px;
+	text-align: right;
+	padding: 0 3em 2em;
+}
+.freight-num {
+	padding-left: 20px;
+	text-align: left;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+@media (max-width: 1200px) {
+	.detailOrder .detail {
+		padding: 2em;
+	}
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+	padding: 1em !important;
+}
+
+.modal-content {
+	background-color: #f4f5f7;
+}
+
+.section-title {
+	text-align: center;
+	padding-bottom: 30px;
+}
+.section-title h2 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	color: #2c4964;
+}
+
+.section-title h2::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 120px;
+	height: 1px;
+	background: #ddd;
+	bottom: 1px;
+	left: calc(50% - 60px);
+}
+.section-title h2::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 40px;
+	height: 3px;
+	background: #1977cc;
+	bottom: 0;
+	left: calc(50% - 20px);
+}
+.section-title p {
+	margin-bottom: 0;
+}
+.card-order {
+	margin: 1em;
+}
+.card-order .form-input {
+	margin-top: 1em;
+}
+
+.card-order textarea.form-control {
+	height: 10em;
+}
+
+#tableData td button {
+	margin: 0 5px;
+}
+
+#tableData tr:nth-child(odd) {
+	background: #fff;
+}
+#tableData tr:nth-child(even) {
+	background: #f3f3f3;
+}

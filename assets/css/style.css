@@ -935,6 +935,9 @@ section {
 	opacity: 0.8;
 	color: #342f28;
 }
+.detailship .detail table td {
+	padding-left: 1em;
+}
 .detailship .detail ul {
 	padding: 0;
 	list-style: none;
