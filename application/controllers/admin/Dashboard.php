@@ -15,6 +15,48 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
+        $data = $this->M_user->getData($this->session->userdata['username']);
+        $data = array(
+            'username' => $data->username,
+            'level' => $data->level,
+            'cities' => $this->M_location->getCities(),
+            'paket' => $this->M_dashboard->getDt('paket'),
+            'vendor' => $this->M_dashboard->getDt('vendor'),
+            'title' => "Halaman Dashboard"
+        );
+        $this->load->view('template/admin_header', $data);
+        $this->load->view('admin/dashboard', $data);
+        $this->load->view('template/admin_footer');
+    }
+    public function getCountAll()
+    {
+        $totalUser = $this->M_dashboard->getCount('user');
+        $totalBarang =  $this->M_dashboard->getCount('barang');
+        $totalVendor = $this->M_dashboard->getCount('vendor');
+        $totalTesti = $this->M_dashboard->getCount('testimonials');
+        $totalIncome = $this->M_dashboard->getSumIncome();
+        $totalAll = [$totalUser, $totalBarang, $totalVendor, $totalTesti, $totalIncome];
+        echo json_encode($totalAll);
+    }
+    public function getTotSenderReceiver()
+    {
+        $sender =  $this->M_dashboard->getCount('pengirim');
+        $receiver = $this->M_dashboard->getCount('penerima');
+        $getTotSenderReceiver = [$sender, $receiver];
+        echo json_encode($getTotSenderReceiver);
+    }
+    public function getCountOrder()
+    {
+        $oP = $this->M_dashboard->getCountOrder('On Process');
+        $oD = $this->M_dashboard->getCountOrder('On Delivery');
+        $d = $this->M_dashboard->getCountOrder('Delivered');
+        $c = $this->M_dashboard->getCountOrder('Canceled');
+        $getCountOrder = [$oP, $oD, $d, $c];
+        echo json_encode($getCountOrder);
+    }
+
+    public function viewGraph()
+    {
         for ($i = 0; $i < 7; $i++) {
             $graphTw[] = $this->M_dashboard->getGraphThisWeek($i);
             $graphLw[] = $this->M_dashboard->getGraphLastWeek($i);
@@ -28,51 +70,10 @@ class Dashboard extends CI_Controller
                 $graphLw[$i][0]->TotalItemsOrdered = 0;
             }
         }
-        $paket = $this->M_dashboard->getDt('paket');
-        if (count($paket) > 0) {
-            for ($i = 0; $i < count($paket); $i++) {
-                $jenis_paket[][] = $paket[$i]->jenis_paket;
-            }
-            for ($i = 0; $i < count($paket); $i++) {
-                array_push($jenis_paket[$i], $this->M_dashboard->getCountPaket($jenis_paket[$i][0]));
-            }
-        }
-
-        $data = $this->M_user->getData($this->session->userdata['username']);
-        $data = array(
-            'username' => $data->username,
-            'level' => $data->level,
-            'graphTw' => $graphTw,
-            'graphLw' => $graphLw,
-            'totalOrderOp' => $this->M_dashboard->getCountOrder('On Process'),
-            'totalOrderOd' => $this->M_dashboard->getCountOrder('On Delivery'),
-            'totalOrderD' => $this->M_dashboard->getCountOrder('Delivered'),
-            'totalOrderC' => $this->M_dashboard->getCountOrder('Canceled'),
-            'totalSender' => $this->M_dashboard->getCount('pengirim'),
-            'totalReceiver' => $this->M_dashboard->getCount('penerima'),
-            'totalUser' => $this->M_dashboard->getCount('user'),
-            'totalBarang' => $this->M_dashboard->getCount('barang'),
-            'totalVendor' => $this->M_dashboard->getCount('vendor'),
-            'totalTestimonials' => $this->M_dashboard->getCount('testimonials'),
-            'totalIncome' => $this->M_dashboard->getSumIncome(),
-            'lastOrder' => $this->M_dashboard->getOrder(),
-            'cities' => $this->M_location->getCities(),
-            'jenisPaket' => $jenis_paket,
-            'paket' => $paket,
-            'vendor' => $this->M_dashboard->getDt('vendor'),
-            'title' => "Halaman Dashboard"
-        );
-
-
-        // echo "<pre>";
-        // print_r($this->M_location->getProvinces());
-        // echo "</pre>";
-
-
-        $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/dashboard', $data);
-        $this->load->view('template/admin_footer');
+        $graphTL = [$graphTw, $graphLw];
+        echo json_encode($graphTL);
     }
+
     public function getData()
     {
         $data = $this->M_dashboard->getOrder();
@@ -162,7 +163,11 @@ class Dashboard extends CI_Controller
     public function deleteData()
     {
         $id_pengiriman = $this->input->post('id_pengiriman');
-        $data = $this->M_dashboard->deleteData($id_pengiriman);
+        $getId = $this->M_dashboard->getDataById($id_pengiriman);
+        $id_barang = $getId[0]->id_barang;
+        $id_pengirim = $getId[0]->id_pengirim;
+        $id_penerima = $getId[0]->id_pengirim;
+        $data = $this->M_dashboard->deleteData($id_pengiriman, $id_pengirim, $id_penerima, $id_barang);
         echo json_encode($data);
     }
     public function getDataId()
@@ -228,5 +233,23 @@ class Dashboard extends CI_Controller
         ];
         $data = $this->M_dashboard->editData($pengirim, $penerima, $barang, $pengiriman);
         echo json_encode($data);
+    }
+    public function getLastOrder()
+    {
+        $data = $this->M_dashboard->getOrder();
+        echo json_encode($data);
+    }
+    public function getMostShipping()
+    {
+        $paket = $this->M_dashboard->getDt('paket');
+        if (count($paket) > 0) {
+            for ($i = 0; $i < count($paket); $i++) {
+                $jenis_paket[][] = $paket[$i]->jenis_paket;
+            }
+            for ($i = 0; $i < count($paket); $i++) {
+                array_push($jenis_paket[$i], $this->M_dashboard->getCountPaket($jenis_paket[$i][0]));
+            }
+        }
+        echo json_encode($jenis_paket);
     }
 }
