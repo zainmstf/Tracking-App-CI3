@@ -3,10 +3,7 @@ class Auth extends CI_Controller
 {
     public function index()
     {
-        $data['title'] = "Halaman Login";
-        $this->load->view('template/admin_header', $data);
         $this->load->view('admin/login');
-        $this->load->view('template/admin_footer');
     }
     public function proses_login()
     {

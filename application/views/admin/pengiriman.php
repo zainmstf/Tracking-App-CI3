@@ -7,152 +7,28 @@
                     <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                                <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Master Data</a>
                             </li>
                         </ul>
                     </div>
                     <div class="tab-content tab-content-basic">
                         <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="statistics-details d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <p class="statistics-title">User</p>
-                                            <h3 class="rate-percentage" id="totalUser"></h3>
-                                        </div>
-                                        <div>
-                                            <p class="statistics-title">Barang</p>
-                                            <h3 class="rate-percentage" id="totalBarang"></h3>
-                                        </div>
-                                        <div>
-                                            <p class="statistics-title">Vendor</p>
-                                            <h3 class="rate-percentage" id="totalVendor"></h3>
-                                        </div>
-                                        <div>
-                                            <p class="statistics-title">Testimonials</p>
-                                            <h3 class="rate-percentage" id="totalTesti"></h3>
-                                        </div>
-                                        <div>
-                                            <p class="statistics-title">All Income</p>
-                                            <h3 class="rate-percentage" id="totalIncome"></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 d-flex flex-column">
+                                <div class="col-sm-12 d-flex flex-column">
                                     <div class="row flex-grow">
                                         <div class="col-12 grid-margin stretch-card">
                                             <div class="card card-rounded">
                                                 <div class="card-body">
                                                     <div class="d-sm-flex justify-content-between align-items-start">
                                                         <div>
-                                                            <h4 class="card-title card-title-dash">Income Overview</h4>
-                                                            <p class="card-subtitle card-subtitle-dash">Total income munggu ini daripada minggu sebelumnya </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-sm-flex align-items-center mt-1 justify-content-between">
-                                                        <div class="d-sm-flex align-items-center mt-1 justify-content-between">
-                                                            <h2 class="me-2 fw-bold" id="totalTw">
-                                                            </h2>
-                                                            <h5 id="percentageTw"></h5>
-                                                        </div>
-                                                        <div class="me-3">
-                                                            <div id="marketing-overview-legend"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="chartjs-bar-wrapper mt-3">
-                                                        <canvas id="marketingOverview"></canvas>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 d-flex flex-column">
-                                    <div class="row flex-grow">
-                                        <div class="col-md-6 col-lg-12 grid-margin stretch-card">
-                                            <div class="card bg-primary card-rounded">
-                                                <div class="card-body pb-0">
-                                                    <h4 class="card-title card-title-dash text-white mb-4">Orders</h4>
-                                                    <div class="row">
-                                                        <div class="col-sm-2">
-                                                            <div>
-                                                                <p class="status-summary-ight-white mb-1">Total</p>
-                                                                <h2 class="text-info" id="totalOrder"></h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-10">
-                                                            <div class="status-summary-chart-wrapper pb-4">
-                                                                <canvas id="status-summary"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-12 grid-margin stretch-card">
-                                            <div class="card card-rounded">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="d-flex align-items-center mb-2 mb-sm-0">
-                                                                <div class="circle-progress-width me-5">
-                                                                    <div id="totalSender" class="progressbar-js-circle pr-2"></div>
-                                                                </div>
-                                                                <div>
-                                                                    <p class="text-small mb-2 ">Total Sender</p>
-                                                                    <h4 class=" mb-0 fw-bold" id="totalSenderCount"></h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="circle-progress-width me-5">
-                                                                    <div id="totalReceiver" class="progressbar-js-circle pr-2"></div>
-                                                                </div>
-                                                                <div>
-                                                                    <p class="text-small mb-2 ">Total Receiver</p>
-                                                                    <h4 class=" mb-0 fw-bold" id="totalReceiverCount"></h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 d-flex flex-column">
-                                    <div class="row flex-grow">
-                                        <div class="col-12 grid-margin stretch-card">
-                                            <div class="card card-rounded table-darkBGImg">
-                                                <div class="card-body">
-                                                    <div class="col-sm-8">
-                                                        <h3 class="text-dark upgrade-info mb-0 fs-4">
-                                                            "Tidak ada pekerjaan yang rendah, yang ada hanyalah <span class="fw-bold">sikap yang rendah.</span>" - William Bennett
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row flex-grow">
-                                        <div class="col-12 grid-margin stretch-card">
-                                            <div class="card card-rounded">
-                                                <div class="card-body">
-                                                    <div class="d-sm-flex justify-content-between align-items-start">
-                                                        <div>
-                                                            <h4 class="card-title card-title-dash">Manage Order</h4>
-                                                            <P class="card-subtitle card-subtitle-dash">Win + Scroll for details order</P>
+                                                            <h4 class="card-title card-title-dash">Manage Orders</h4>
+                                                            <P class="card-subtitle card-subtitle-dash">Shift + Scroll for details item</P>
                                                         </div>
                                                         <div>
-                                                            <button class="btn btn-inverse-primary btn-lg mb-0 me-0" type="button" data-bs-toggle="modal" data-bs-target="#addNewOrder"><i class="mdi mdi-note-plus"></i>Add new order</button>
+                                                            <button class="btn btn-inverse-primary btn-lg mb-0 me-0" type="button" data-bs-toggle="modal" data-bs-target="#addModal"><i class="mdi mdi-note-plus"></i>Add new order</button>
 
                                                             <!-- Modal Add-->
-                                                            <div class="modal fade" id="addNewOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog modal-dialog-centered modal-xl">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
@@ -430,14 +306,14 @@
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btninverse-secondary" data-bs-dismiss="modal">Close</button>
-                                                                            <button type="button" class="btn btn-inverse-primary" id="addOrder">Add Order</button>
+                                                                            <button type="button" class="btn btn-inverse-primary" id="addButtonModal">Add Type Item</button>
                                                                         </div>
 
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- Modal edit-->
-                                                            <div class="modal fade" id="editOrder" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <!-- Modal Edit-->
+                                                            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                 <div class="modal-dialog modal-dialog-centered modal-xl">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
@@ -715,79 +591,36 @@
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btninverse-secondary" data-bs-dismiss="modal">Close</button>
-                                                                            <button type="button" class="btn btn-inverse-primary" id="editOrderbtn">Save Changes</button>
+                                                                            <button type="button" class="btn btn-inverse-primary" id="editButtonModal">Save Changes</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex justify-content-between align-items-start mt-2 ">
-                                                        <input type="text" id="manage_order" name="manage_order" class="form-control  text-center" placeholder="Masukkan Resi Anda" onkeyup="searchOrder()">
-                                                    </div>
+
                                                     <div id="notfound"></div>
                                                     <div class="table-responsive mt-1">
-                                                        <table class="table select-table text-center" id="tableOrder">
+                                                        <table class="table select-table text-center" id="tableData">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>No Resi</th>
-                                                                    <th>Nama Barang</th>
-                                                                    <th>Berat</th>
-                                                                    <th>Pengirim</th>
-                                                                    <th>Penerima</th>
-                                                                    <th>Jenis Barang</th>
-                                                                    <th>Qty</th>
-                                                                    <th>Total Biaya</th>
-                                                                    <th>Keterangan</th>
+                                                                    <th>Shipping Id</th>
+                                                                    <th>Resi Number</th>
+                                                                    <th>Package</th>
+                                                                    <th>Sender</th>
+                                                                    <th>Receipent</th>
+                                                                    <th>Total Fee</th>
                                                                     <th>Status</th>
-                                                                    <th>Nama Admin</th>
+                                                                    <th>Note</th>
+                                                                    <th>Order Date</th>
+                                                                    <th>Receive Date</th>
+                                                                    <th>Admin</th>
                                                                     <th>Action</th>
                                                                 </tr>
                                                             </thead>
-                                                            <tbody id="tableData">
-
+                                                            <tbody id="tableDataTable">
                                                             </tbody>
                                                         </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 d-flex flex-column">
-                                    <div class="row flex-grow">
-                                        <div class="col-12 grid-margin stretch-card">
-                                            <div class="card card-rounded">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                                <div>
-                                                                    <h4 class="card-title card-title-dash">Last Orders</h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-3" id="lastOrder">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row flex-grow">
-                                        <div class="col-12 grid-margin stretch-card">
-                                            <div class="card card-rounded">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                                                <div>
-                                                                    <h4 class="card-title card-title-dash">Most used shipping</h4>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-3" id="mostShipping">
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -811,6 +644,7 @@
     </footer>
     <!-- partial -->
 </div>
+
 <!-- main-panel ends -->
 </div>
 <!-- page-body-wrapper ends -->
@@ -818,13 +652,7 @@
 <!-- container-scroller -->
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
-    getCountAll();
-    viewGraph();
-    getTotSenderReceiver();
-    getOrder();
-    getLastOrder();
     getData();
-    getMostShipping();
     const shippingCost = $(".shipping-cost");
     const insurance = $(".insurance");
     const qty = $(".qty");
@@ -860,82 +688,6 @@
         });
     }
 
-    function searchOrder() {
-        const base_url = window.location.pathname;
-        let value = $("#manage_order").val();
-        $.ajax({
-            method: "POST",
-            dataType: "json",
-            url: `${base_url}/getDataFromAjx`,
-            data: {
-                input_ajx: value,
-            },
-            success: function(result) {
-                if (result == "") {
-                    let html = ` <div class="alert alert-danger alert-dismissible fade show mt-4 text-center alert-data-nf" role="alert">
-				<strong>Data tidak ditemukan!</strong> Resi yang anda masukkan salah.
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-			  </div>`;
-                    $("#notfound").html(html);
-                    $("#tableData").html("");
-                } else {
-                    let i;
-                    let html = "";
-                    let status;
-                    for (i = 0; i < result.length; i++) {
-                        if (
-                            result[i].status == "On Process" ||
-                            result[i].status == "On Delivery"
-                        ) {
-                            status = "warning";
-                        }
-                        if (result[i].status == "Delivered") {
-                            status = "success";
-                        }
-                        if (result[i].status == "Cancelled") {
-                            status = "danger";
-                        }
-                        html += `<tr>
-					<td>
-						<h6 class="text-${status}">${result[i].no_resi}</h6>
-					</td>
-					<td>
-						${result[i].nama_barang}
-					</td>
-					<td>
-					${result[i].berat}
-					</td>
-					<td>
-					${result[i].nama_pengirim}
-					</td>
-					<td>${result[i].nama_penerima}</td>
-					<td>${result[i].jenis_paket}</td>
-					<td>${result[i].qty}</td>
-					<td>${result[i].total_harga}</td>
-					<td>${result[i].keterangan}<td>
-						<div class="badge badge-${status}">${result[i].status}</div>
-					</td>
-					<td>
-					<div>
-						<h6>${result[i].username}</h6>
-						<p>Admin</p>
-					</div>
-					</td>
-					<td>
-					<div>
-					<button type="button" class="btn btn-inverse-warning btn-edit" data-id="${result[i].id_pengiriman}">Edit</button>
-					<button type="button" class="btn btn-inverse-danger btn-delete" data-id="${result[i].id_pengiriman}">Delete</button>
-					</div>
-					</td>
-				</tr>`;
-                    }
-                    $("#notfound").html("");
-                    $("#tableData").html(html);
-                }
-            },
-        });
-    }
-
     function getData() {
         const base_url = window.location.pathname;
         $.ajax({
@@ -945,8 +697,13 @@
             success: function(response) {
                 let i;
                 let html = "";
-                let status;
                 for (i = 0; i < response.length; i++) {
+                    if (response[i].tgl_diterima == null) {
+                        response[i].tgl_diterima = "";
+                    }
+                    if (response[i].keterangan == " ") {
+                        response[i].keterangan = "Tidak ada";
+                    }
                     if (
                         response[i].status == "On Process" ||
                         response[i].status == "On Delivery"
@@ -959,45 +716,71 @@
                     if (response[i].status == "Cancelled") {
                         status = "danger";
                     }
+                    let biaya_pengiriman = rupiah(response[i].biaya_pengiriman);
+                    let asuransi = rupiah(response[i].asuransi);
+                    let total = rupiah(response[i].total_harga);
                     html += `<tr>
 					<td>
-						<h6 class="text-${status}">${response[i].no_resi}</h6>
+						${response[i].id_pengiriman}
 					</td>
 					<td>
-						${response[i].nama_barang}
+					<strong>${response[i].no_resi}</strong>
 					</td>
-					<td>
-					${response[i].berat}
+                    <td>
+					<p class="text-start"><strong>${response[i].nama_barang}</strong></p>
+                    <p class="text-start">Type Item : ${response[i].jenis_paket}</p>
+                    <p class="text-start">Weight : ${response[i].berat} Kg</p>
+                    <p class="text-start">Qty : ${response[i].qty}</p>
 					</td>
-					<td>
-					${response[i].nama_pengirim}
+                    <td>
+					<p class="text-start"><strong>${response[i].nama_pengirim}</strong></p>
+                    <p class="text-start">${response[i].alamat_pengirim}</p>
+                    <p class="text-start">${response[i].kode_pos_pengirim}</p>
+                    <p class="text-start">Telp  : ${response[i].telp_pengirim}</p>
 					</td>
-					<td>${response[i].nama_penerima}</td>
-					<td>${response[i].jenis_paket}</td>
-					<td>${response[i].qty}</td>
-					<td>${response[i].total_harga}</td>
-					<td>${response[i].keterangan}<td>
-						<div class="badge badge-${status}">${response[i].status}</div>
+                    <td>
+					<p class="text-start"><strong>${response[i].nama_penerima}</strong></p>
+                    <p class="text-start">${response[i].alamat_penerima}</p>
+                    <p class="text-start">${response[i].kode_pos_penerima}</p>
+                    <p class="text-start">Telp  : ${response[i].telp_penerima}</p>
 					</td>
-					<td>
-					<div>
-						<h6>${response[i].username}</h6>
-						<p>Admin</p>
-					</div>
+                    <td>
+                    <p class="text-start">Shipping Cost : ${biaya_pengiriman}</p>
+                    <p class="text-start">Insurance : ${asuransi}</p>
+                    <p class="text-start">---------------------------------- x ${response[i].qty} qty</p>
+                    <p class="text-start"><strong>${total}</strong></p>
 					</td>
-					<td>
-					<div>
-					<button type="button" class="btn btn-inverse-warning btn-edit" data-id="${response[i].id_pengiriman}">Edit</button>
-					<button type="button" class="btn btn-inverse-danger btn_delete" data-id="${response[i].id_pengiriman}">Delete</button>
-					</div>
+                    <td>
+					<div class="badge badge-${status}">${response[i].status}</div>
 					</td>
+                    <td>
+					${response[i].keterangan}
+					</td>
+                    <td>
+					${response[i].tgl_order}
+					</td>
+                     <td>
+					${response[i].tgl_diterima}
+					</td>
+                    <td>
+					${response[i].username}
+					</td>
+                    <td><button type="button" class="btn btn-inverse-warning btn-edit" data-id="${response[i].id_pengiriman}">Edit</button>
+					<button type="button" class="btn btn-inverse-danger btn_delete" data-id="${response[i].id_pengiriman}">Delete</button></td>
 				</tr>`;
                 }
-                return $("#tableData").html(html);
+                $('#tableData').DataTable().destroy();
+                $("#tableDataTable").html(html);
+                let table = $('#tableData').DataTable({
+                    "columnDefs": [{
+                        "className": "dt-center",
+                        "targets": "_all"
+                    }],
+                });
             },
         });
     }
-    $("#addOrder").on("click", function() {
+    $("#addButtonModal").on("click", function() {
         const base_url = window.location.pathname;
         let sender_name = $("input[name=sender_name]").val();
         let sender_phone_number = $("input[name=sender_phone_number]").val();
@@ -1019,6 +802,7 @@
         let insurance = $("input[name=insurance]").val();
         let qty = $("input[name=qty]").val();
         let note = $("textarea[name=note]").val();
+
         $.ajax({
             url: `${base_url}/addData`,
             type: "POST",
@@ -1059,36 +843,24 @@
                 $("input[name=qty]").val("1");
                 $("textarea[name=note]").val("");
                 $("#addNewOrder").modal("hide");
-                getCountAll();
-                viewGraph();
-                getTotSenderReceiver();
-                getOrder();
-                getLastOrder();
+                $("#addModal").modal("hide");
                 getData();
-                getMostShipping();
             },
         });
     });
-
     $("#tableData").on("click", ".btn_delete", function() {
         const base_url = window.location.pathname;
-        let id_pengiriman = $(this).attr("data-id");
+        let id = $(this).attr("data-id");
         let status = confirm("Yakin ingin menghapus?");
         if (status) {
             $.ajax({
                 url: `${base_url}/deleteData`,
                 type: "POST",
                 data: {
-                    id_pengiriman: id_pengiriman,
+                    id: id,
                 },
                 success: function(response) {
-                    getCountAll();
-                    viewGraph();
-                    getTotSenderReceiver();
-                    getOrder();
-                    getLastOrder();
                     getData();
-                    getMostShipping();
                 },
             });
         }
@@ -1096,15 +868,16 @@
     let edit = [0];
     $("#tableData").on("click", ".btn-edit", function() {
         const base_url = window.location.pathname;
-        let id_pengiriman = $(this).attr("data-id");
+        let id = $(this).attr("data-id");
         $.ajax({
             url: `${base_url}/getDataId`,
             type: "POST",
             data: {
-                id_pengiriman: id_pengiriman,
+                id: id,
             },
             dataType: "json",
             success: function(response) {
+                edit[0] = response[0];
                 edit[0] = response[0];
                 $("input[name=sender_name_edit]").val(response[0].nama_pengirim);
                 $("input[name=sender_phone_number_edit]").val(response[0].telp_pengirim);
@@ -1141,11 +914,11 @@
                 $(".yfmoney").html(rupiah(response[0].biaya_pengiriman));
                 $(".bjmoney").html(rupiah(response[0].asuransi));
                 $(".zmoney").html(rupiah(response[0].total_harga));
-                $("#editOrder").modal("show");
+                $("#editModal").modal("show");
             },
         });
     });
-    $("#editOrderbtn").on("click", function() {
+    $("#editButtonModal").on("click", function() {
         const base_url = window.location.pathname;
         let id_pengirim = edit[0].id_pengirim;
         let sender_name = $("input[name=sender_name_edit]").val();
@@ -1219,478 +992,9 @@
                 $("input[name=insurance_edit]").val("");
                 $("input[name=qty_edit]").val("1");
                 $("textarea[name=note_edit]").val("");
-                $("#editOrder").modal("hide");
-                getCountAll();
-                viewGraph();
-                getTotSenderReceiver();
-                getOrder();
-                getLastOrder();
+                $("#editModal").modal("hide");
                 getData();
-                getMostShipping();
             },
         });
     });
-
-    function getLastOrder() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/getLastOrder`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                let html = "";
-                for (let i = 0; i < response.length; i++) {
-                    let ago = moment(response[i].tgl_order).fromNow();
-                    html += `
-				<div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
-					<div class="d-flex">
-						<div class="wrapper ms-3 pe-3">
-							<p class="mb-1 fw-bold">${response[i].nama_barang}</p>
-							<small class="text-muted mb-0">${response[i].jenis_paket}</small>
-						</div>
-					</div>
-					<div class="text-muted text-small ps-3">
-					${ago}
-					</div>
-				</div>
-				`;
-                }
-                return $("#lastOrder").html(html);
-            },
-        });
-    }
-
-    function getMostShipping() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/getMostShipping`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                let html = "";
-                for (let i = 0; i < response.length; i++) {
-                    html += `
-				<div class="wrapper d-flex align-items-center justify-content-between py-2 border-bottom">
-					<div class="d-flex">
-						<div class="wrapper ms-3 pe-3">
-							<p class="mb-1 fw-bold">${response[i][0]}</p>
-						</div>
-					</div>
-					<div class="text-muted text-small ps-3">
-					${response[i][1]}
-					</div>
-				</div>
-				`;
-                }
-                return $("#mostShipping").html(html);
-            },
-        });
-    }
-
-    function viewGraph() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/viewGraph`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                let dataTw = [];
-                let dataLw = [];
-                for (let i = 0; i < response[0].length; i++) {
-                    dataTw.push(response[0][i][0].TotalItemsOrdered);
-                }
-                for (let i = 0; i < response[1].length; i++) {
-                    dataLw.push(response[0][i][0].TotalItemsOrdered);
-                }
-
-                if ($("#marketingOverview").length) {
-                    var graphGradient = document
-                        .getElementById("marketingOverview")
-                        .getContext("2d");
-                    var graphGradient2 = document
-                        .getElementById("marketingOverview")
-                        .getContext("2d");
-                    var saleGradientBg = graphGradient.createLinearGradient(5, 0, 5, 100);
-                    saleGradientBg.addColorStop(0, "rgba(26, 115, 232, 0.18)");
-                    saleGradientBg.addColorStop(1, "rgba(26, 115, 232, 0.02)");
-                    var saleGradientBg2 = graphGradient2.createLinearGradient(
-                        100,
-                        0,
-                        50,
-                        150
-                    );
-                    saleGradientBg2.addColorStop(0, "rgba(0, 208, 255, 0.19)");
-                    saleGradientBg2.addColorStop(1, "rgba(0, 208, 255, 0.03)");
-                    var salesTopData = {
-                        labels: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
-                        datasets: [{
-                                label: "This week",
-                                data: dataTw,
-                                backgroundColor: saleGradientBg,
-                                borderColor: ["#1F3BB3"],
-                                borderWidth: 1.5,
-                                fill: true, // 3: no fill
-                                pointBorderWidth: 1,
-                                pointRadius: [4, 4, 4, 4, 4, 4, 4],
-                                pointHoverRadius: [2, 2, 2, 2, 2, 2, 2],
-                                pointBackgroundColor: [
-                                    "#1F3BB3)",
-                                    "#1F3BB3",
-                                    "#1F3BB3",
-                                    "#1F3BB3",
-                                    "#1F3BB3)",
-                                    "#1F3BB3",
-                                    "#1F3BB3",
-                                ],
-                                pointBorderColor: [
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                ],
-                            },
-                            {
-                                label: "Last week",
-                                data: dataLw,
-                                backgroundColor: saleGradientBg2,
-                                borderColor: ["#52CDFF"],
-                                borderWidth: 1.5,
-                                fill: true, // 3: no fill
-                                pointBorderWidth: 1,
-                                pointRadius: [4, 4, 4, 4, 4, 4, 4],
-                                pointHoverRadius: [2, 2, 2, 2, 2, 2, 2],
-                                pointBackgroundColor: [
-                                    "#52CDFF)",
-                                    "#52CDFF",
-                                    "#52CDFF",
-                                    "#52CDFF",
-                                    "#52CDFF)",
-                                    "#52CDFF",
-                                    "#52CDFF",
-                                ],
-                                pointBorderColor: [
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                    "#fff",
-                                ],
-                            },
-                        ],
-                    };
-
-                    var salesTopOptions = {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            yAxes: [{
-                                gridLines: {
-                                    display: true,
-                                    drawBorder: false,
-                                    color: "#F0F0F0",
-                                    zeroLineColor: "#F0F0F0",
-                                },
-                                ticks: {
-                                    beginAtZero: false,
-                                    autoSkip: true,
-                                    maxTicksLimit: 4,
-                                    fontSize: 10,
-                                    color: "#6B778C",
-                                },
-                            }, ],
-                            xAxes: [{
-                                gridLines: {
-                                    display: false,
-                                    drawBorder: false,
-                                },
-                                ticks: {
-                                    beginAtZero: false,
-                                    autoSkip: true,
-                                    maxTicksLimit: 7,
-                                    fontSize: 10,
-                                    color: "#6B778C",
-                                },
-                            }, ],
-                        },
-                        legend: false,
-                        legendCallback: function(chart) {
-                            var text = [];
-                            text.push('<div class="chartjs-legend"><ul>');
-                            for (var i = 0; i < chart.data.datasets.length; i++) {
-                                text.push("<li>");
-                                text.push(
-                                    '<span style="background-color:' +
-                                    chart.data.datasets[i].borderColor +
-                                    '">' +
-                                    "</span>"
-                                );
-                                text.push(chart.data.datasets[i].label);
-                                text.push("</li>");
-                            }
-                            text.push("</ul></div>");
-                            return text.join("");
-                        },
-
-                        elements: {
-                            line: {
-                                tension: 0.4,
-                            },
-                        },
-                        tooltips: {
-                            backgroundColor: "rgba(31, 59, 179, 1)",
-                        },
-                    };
-                    var salesTop = new Chart(graphGradient, {
-                        type: "line",
-                        data: salesTopData,
-                        options: salesTopOptions,
-                    });
-                    document.getElementById("marketing-overview-legend").innerHTML =
-                        salesTop.generateLegend();
-                }
-                let totalTw = 0;
-                let totalLw = 0;
-                for (let i = 0; i < 7; i++) {
-                    totalTw += dataTw[i];
-                    totalLw += dataLw[i];
-                }
-                if (totalTw == 0 || totalLw == 0) {
-                    percentage = 0;
-                } else {
-                    percentage = (totalTw / totalLw) * 100;
-                }
-                document.getElementById("totalTw").innerHTML = rupiah(totalTw);
-
-                if (totalTw >= totalLw) {
-                    document.getElementById(
-                        "percentageTw"
-                    ).innerHTML = `(+ ${percentage} %)`;
-                    document
-                        .getElementById("percentageTw")
-                        .classList.toggle("text-success");
-                } else {
-                    document.getElementById(
-                        "percentageTw"
-                    ).innerHTML = `(- ${percentage} %)`;
-                    document.getElementById("percentageTw").classList.toggle("text-danger");
-                }
-            },
-        });
-    }
-
-    function getOrder() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/getCountOrder`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                if ($("#status-summary").length) {
-                    var statusSummaryChartCanvas = document
-                        .getElementById("status-summary")
-                        .getContext("2d");
-                    var statusData = {
-                        labels: ["On Process", "On Delivery", "Delivered", "Canceled"],
-                        datasets: [{
-                            label: "# of Order",
-                            data: [
-                                response[0].length,
-                                response[1].length,
-                                response[2].length,
-                                response[3].length,
-                            ],
-                            backgroundColor: "#ffcc00",
-                            borderColor: ["#01B6A0"],
-                            borderWidth: 2,
-                            fill: false, // 3: no fill
-                            pointBorderWidth: 0,
-                            pointRadius: [0, 0, 0, 0, 0, 0],
-                            pointHoverRadius: [0, 0, 0, 0, 0, 0],
-                        }, ],
-                    };
-
-                    var statusOptions = {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: {
-                            yAxes: [{
-                                display: false,
-                                gridLines: {
-                                    display: false,
-                                    drawBorder: false,
-                                    color: "#F0F0F0",
-                                },
-                                ticks: {
-                                    beginAtZero: false,
-                                    autoSkip: true,
-                                    maxTicksLimit: 4,
-                                    fontSize: 10,
-                                    color: "#6B778C",
-                                },
-                            }, ],
-                            xAxes: [{
-                                display: true,
-                                gridLines: {
-                                    display: false,
-                                    drawBorder: false,
-                                },
-                                ticks: {
-                                    beginAtZero: false,
-                                    autoSkip: true,
-                                    maxTicksLimit: 7,
-                                    fontSize: 10,
-                                    color: "#6B778C",
-                                    fontColor: "#fff",
-                                },
-                            }, ],
-                        },
-                        legend: false,
-
-                        elements: {
-                            line: {
-                                tension: 0.4,
-                            },
-                        },
-                        tooltips: {
-                            backgroundColor: "rgba(31, 59, 179, 1)",
-                        },
-                    };
-                    var statusSummaryChart = new Chart(statusSummaryChartCanvas, {
-                        type: "line",
-                        data: statusData,
-                        options: statusOptions,
-                    });
-                }
-                document.getElementById("totalOrder").innerHTML =
-                    response[0].length +
-                    response[1].length +
-                    response[2].length +
-                    response[3].length;
-            },
-        });
-    }
-
-    function getTotSenderReceiver() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/getTotSenderReceiver`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                document.getElementById("totalSenderCount").innerHTML = response[0];
-                document.getElementById("totalReceiverCount").innerHTML = response[1];
-                let sender = 0;
-                let receiver = 0;
-                if (response[0] == 0 || response[1] == 0) {
-                    sender = 0;
-                    receiver = 0;
-                } else {
-                    sender = response[0] / (response[0] + response[1]);
-                    receiver = response[1] / (response[0] + response[1]);
-                }
-                $("#totalSender").html("");
-                $("#totalReceiver").html("");
-                if ($("#totalSender").length) {
-                    var bar = new ProgressBar.Circle(totalSender, {
-                        color: "#fff",
-                        // This has to be the same size as the maximum width to
-                        // prevent clipping
-                        strokeWidth: 15,
-                        trailWidth: 15,
-                        easing: "easeInOut",
-                        duration: 1400,
-                        text: {
-                            autoStyleContainer: false,
-                        },
-                        from: {
-                            color: "#52CDFF",
-                            width: 15,
-                        },
-                        to: {
-                            color: "#677ae4",
-                            width: 15,
-                        },
-                        // Set default step function for all animate calls
-                        step: function(state, circle) {
-                            circle.path.setAttribute("stroke", state.color);
-                            circle.path.setAttribute("stroke-width", state.width);
-
-                            var value = Math.round(circle.value() * 100);
-                            if (value === 0) {
-                                circle.setText("");
-                            } else {
-                                circle.setText(value);
-                            }
-                        },
-                    });
-
-                    bar.text.style.fontSize = "0rem";
-                    bar.animate(sender); // Number from 0.0 to 1.0
-                }
-                if ($("#totalReceiver").length) {
-                    var bar = new ProgressBar.Circle(totalReceiver, {
-                        color: "#fff",
-                        // This has to be the same size as the maximum width to
-                        // prevent clipping
-                        strokeWidth: 15,
-                        trailWidth: 15,
-                        easing: "easeInOut",
-                        duration: 1400,
-                        text: {
-                            autoStyleContainer: false,
-                        },
-                        from: {
-                            color: "#34B1AA",
-                            width: 15,
-                        },
-                        to: {
-                            color: "#677ae4",
-                            width: 15,
-                        },
-                        // Set default step function for all animate calls
-                        step: function(state, circle) {
-                            circle.path.setAttribute("stroke", state.color);
-                            circle.path.setAttribute("stroke-width", state.width);
-
-                            var value = Math.round(circle.value() * 100);
-                            if (value === 0) {
-                                circle.setText("");
-                            } else {
-                                circle.setText(value);
-                            }
-                        },
-                    });
-
-                    bar.text.style.fontSize = "0rem";
-                    bar.animate(receiver); // Number from 0.0 to 1.0
-                }
-            },
-        });
-    }
-
-    function getCountAll() {
-        const base_url = window.location.pathname;
-        $.ajax({
-            url: `${base_url}/getCountAll`,
-            type: "GET",
-            dataType: "json",
-            success: function(response) {
-                if (response[4][0].TotalItemsOrdered == null) {
-                    response[4][0].TotalItemsOrdered = 0;
-                }
-                document.getElementById("totalUser").innerHTML = response[0];
-                document.getElementById("totalBarang").innerHTML = response[1];
-                document.getElementById("totalVendor").innerHTML = response[2];
-                document.getElementById("totalTesti").innerHTML = response[3];
-                document.getElementById("totalIncome").innerHTML = rupiah(
-                    response[4][0].TotalItemsOrdered
-                );
-            },
-        });
-    }
 </script>

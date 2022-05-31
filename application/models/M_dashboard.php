@@ -97,10 +97,19 @@ class M_dashboard extends CI_Model
         $this->db->insert('pengiriman', $pengiriman);
         $this->db->trans_complete();
     }
-    public function deleteData($id_pengiriman)
+    public function deleteData($id_pengiriman, $id_pengirim, $id_penerima, $id_barang)
     {
+        $this->db->trans_start();
         $this->db->where('id_pengiriman', $id_pengiriman);
         $this->db->delete('pengiriman');
+        $this->db->where('id_pengirim', $id_pengirim);
+        $this->db->delete('pengirim');
+        $this->db->where('id_penerima', $id_penerima);
+        $this->db->delete('penerima');
+        $this->db->where('id_barang', $id_barang);
+        $this->db->delete('barang');
+
+        $this->db->trans_complete();
     }
     public function getDataById($id_pengiriman)
     {

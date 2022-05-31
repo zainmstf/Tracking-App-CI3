@@ -200,6 +200,7 @@ i.bx-border-circle.icon-ship {
 
 #tableData td button {
 	margin: 0 5px;
+	padding: 0.7em 1em;
 }
 
 #tableData tr:nth-child(odd) {

@@ -1,5 +1,5 @@
 <?php
-class M_pengiriman extends CI_Model
+class M_home extends CI_Model
 {
   public function testi()
   {
