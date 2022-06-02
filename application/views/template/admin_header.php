@@ -101,30 +101,74 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('/admin/Dashboard') ?>">
-                        <i class="mdi mdi-grid-large menu-icon"></i>
+                        <i class="mdi mdi-view-dashboard menu-icon"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item nav-category">Master Data</li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="true" aria-controls="ui-basic">
-                        <i class="menu-icon mdi mdi-floor-plan"></i>
-                        <span class="menu-title">Master Data</span>
-                        <i class="menu-arrow"></i>
+                    <a class="nav-link" href="<?php echo base_url('admin/barang') ?>">
+                        <i class="mdi mdi-package menu-icon"></i>
+                        <span class="menu-title">Package</span>
                     </a>
-                    <div class="collapse show" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/barang') ?>">Barang</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/jenis_barang') ?>">Jenis Barang</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/pengirim') ?>">Pengirim</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/penerima') ?>">Penerima</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/pengiriman') ?>">Pengiriman</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="<?php echo base_url('admin/vendor') ?>">Vendor</a></li>
-                        </ul>
-                    </div>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/jenis_barang') ?>">
+                        <i class="mdi mdi-view-module menu-icon"></i>
+                        <span class="menu-title">Type Item</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/pengirim') ?>">
+                        <i class="mdi mdi-send menu-icon"></i>
+                        <span class="menu-title">Sender</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/penerima') ?>">
+                        <i class="mdi mdi-receipt menu-icon"></i>
+                        <span class="menu-title">Receipent</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/pengiriman') ?>">
+                        <i class="mdi mdi-truck-delivery menu-icon"></i>
+                        <span class="menu-title">Shipping</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/vendor') ?>">
+                        <i class="mdi mdi-account-network menu-icon"></i>
+                        <span class="menu-title">Vendor</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-category">Shipping Tools</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/print_receipt') ?>">
+                        <i class="mdi mdi-printer menu-icon"></i>
+                        <span class="menu-title">Print Receipt</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/change_status') ?>">
+                        <i class="mdi mdi-alert-box menu-icon"></i>
+                        <span class="menu-title">Change Status</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-category">Reports</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/Incoming_report') ?>">
+                        <i class="mdi mdi-file-import menu-icon"></i>
+                        <span class="menu-title">Incoming Reports</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('admin/Outcoming_report') ?>">
+                        <i class="mdi mdi-file-export menu-icon"></i>
+                        <span class="menu-title">Outcoming Reports</span>
+                    </a>
+                </li>
             </ul>
         </nav>

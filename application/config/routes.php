@@ -60,3 +60,9 @@ $route['admin/pengirim'] = 'admin/Pengirim';
 $route['admin/penerima'] = 'admin/Penerima';
 $route['admin/pengiriman'] = 'admin/Pengiriman';
 $route['admin/vendor'] = 'admin/Vendor';
+
+$route['admin/print_receipt'] = 'admin/Print_receipt';
+$route['admin/change_status'] = 'admin/Change_status';
+
+$route['admin/incoming_report'] = 'admin/Incoming_report';
+$route['admin/Outcoming_report'] = 'admin/Outcoming_report';

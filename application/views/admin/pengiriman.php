@@ -713,7 +713,7 @@
                     if (response[i].status == "Delivered") {
                         status = "success";
                     }
-                    if (response[i].status == "Cancelled") {
+                    if (response[i].status == "Canceled") {
                         status = "danger";
                     }
                     let biaya_pengiriman = rupiah(response[i].biaya_pengiriman);
@@ -736,12 +736,14 @@
 					<p class="text-start"><strong>${response[i].nama_pengirim}</strong></p>
                     <p class="text-start">${response[i].alamat_pengirim}</p>
                     <p class="text-start">${response[i].kode_pos_pengirim}</p>
+                    <p class="text-start">${response[i].asal}</p>
                     <p class="text-start">Telp  : ${response[i].telp_pengirim}</p>
 					</td>
                     <td>
 					<p class="text-start"><strong>${response[i].nama_penerima}</strong></p>
                     <p class="text-start">${response[i].alamat_penerima}</p>
                     <p class="text-start">${response[i].kode_pos_penerima}</p>
+                    <p class="text-start">${response[i].tujuan}</p>
                     <p class="text-start">Telp  : ${response[i].telp_penerima}</p>
 					</td>
                     <td>

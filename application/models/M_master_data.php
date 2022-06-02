@@ -70,6 +70,7 @@ class M_master_data extends CI_Model
 
         $this->db->trans_complete();
     }
+
     public function getDataByIdPengiriman($id_pengiriman)
     {
         return $this->db
@@ -100,5 +101,10 @@ class M_master_data extends CI_Model
 
 
         $this->db->trans_complete();
+    }
+    public function changeStatus($pengiriman)
+    {
+        $this->db->where('id_pengiriman', $pengiriman['id_pengiriman']);
+        $this->db->update('pengiriman', $pengiriman);
     }
 }

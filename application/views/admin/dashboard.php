@@ -48,7 +48,7 @@
                                                     <div class="d-sm-flex justify-content-between align-items-start">
                                                         <div>
                                                             <h4 class="card-title card-title-dash">Income Overview</h4>
-                                                            <p class="card-subtitle card-subtitle-dash">Total income munggu ini daripada minggu sebelumnya </p>
+                                                            <p class="card-subtitle card-subtitle-dash">Total income munggu ini daripada minggu sebelumnya</p>
                                                         </div>
                                                     </div>
                                                     <div class="d-sm-flex align-items-center mt-1 justify-content-between">
@@ -892,7 +892,7 @@
                         if (result[i].status == "Delivered") {
                             status = "success";
                         }
-                        if (result[i].status == "Cancelled") {
+                        if (result[i].status == "Canceled") {
                             status = "danger";
                         }
                         html += `<tr>
@@ -956,12 +956,12 @@
                     if (response[i].status == "Delivered") {
                         status = "success";
                     }
-                    if (response[i].status == "Cancelled") {
+                    if (response[i].status == "Canceled") {
                         status = "danger";
                     }
                     html += `<tr>
 					<td>
-						<h6 class="text-${status}">${response[i].no_resi}</h6>
+						<h6>${response[i].no_resi}</h6>
 					</td>
 					<td>
 						${response[i].nama_barang}
@@ -1456,8 +1456,8 @@
                 let totalTw = 0;
                 let totalLw = 0;
                 for (let i = 0; i < 7; i++) {
-                    totalTw += dataTw[i];
-                    totalLw += dataLw[i];
+                    totalTw += parseInt(dataTw[i]);
+                    totalLw += parseInt(dataLw[i]);
                 }
                 if (totalTw == 0 || totalLw == 0) {
                     percentage = 0;
@@ -1688,7 +1688,7 @@
                 document.getElementById("totalVendor").innerHTML = response[2];
                 document.getElementById("totalTesti").innerHTML = response[3];
                 document.getElementById("totalIncome").innerHTML = rupiah(
-                    response[4][0].TotalItemsOrdered
+                    response[4][0].TotalOrdered
                 );
             },
         });
