@@ -43,7 +43,7 @@ class Outcoming_report extends CI_Controller
         $data['sumTime'] = "Outcoming_report/getDataTotalIncome";
         $this->load->view('template/laporan', $data);
     }
-    public function getDataTotalIncome()
+    public function getDataTotalOutcome()
     {
         $data = $this->M_report->getSumOutcome();
         echo json_encode($data);
