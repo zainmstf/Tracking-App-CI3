@@ -23,7 +23,7 @@ class Pengiriman extends CI_Controller
             'cities' => $this->M_location->getCities(),
             'paket' => $this->M_dashboard->getDt('paket'),
             'vendor' => $this->M_dashboard->getDt('vendor'),
-            'title' => "Halaman Type Item"
+            'title' => "Shipping Page"
         );
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/pengiriman');

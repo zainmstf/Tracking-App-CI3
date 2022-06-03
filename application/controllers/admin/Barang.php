@@ -21,7 +21,7 @@ class Barang extends CI_Controller
             'username' => $data->username,
             'level' => $data->level,
             'vendor' => $this->M_master_data->getData('vendor'),
-            'title' => "Halaman Barang"
+            'title' => "Package Page"
         );
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/barang');
@@ -41,6 +41,7 @@ class Barang extends CI_Controller
             'id_vendor' => $this->input->post('vendor'),
             'nama_barang' => $this->input->post('item_name'),
             'berat' => $this->input->post('weight'),
+            'volume' => $this->input->post('volume'),
         ];
         $data = $this->M_master_data->addNewData("barang", $barang);
         echo json_encode($data);
@@ -64,6 +65,7 @@ class Barang extends CI_Controller
             'id_vendor' => $this->input->post('vendor'),
             'nama_barang' => $this->input->post('item_name'),
             'berat' => $this->input->post('weight'),
+            'volume' => $this->input->post('volume'),
         ];
         $data = $this->M_master_data->editData('barang', 'id_barang', $barang['id_barang'], $barang);
         echo json_encode($data);

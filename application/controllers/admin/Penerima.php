@@ -21,7 +21,7 @@ class Penerima extends CI_Controller
             'username' => $data->username,
             'level' => $data->level,
             'cities' => $this->M_location->getCities(),
-            'title' => "Halaman Type Item"
+            'title' => "Receipent Page"
         );
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/penerima');

@@ -292,6 +292,7 @@
         let vendor = $("select[name=vendor]").val();
         let item_name = $("input[name=item_name]").val();
         let weight = $("input[name=weight]").val();
+        let volume = $("input[name=volume]").val();
         $.ajax({
             url: `${base_url}/addData`,
             type: "POST",
@@ -299,11 +300,13 @@
                 vendor: vendor,
                 item_name: item_name,
                 weight: weight,
+                volume: volume,
             },
             dataType: "json",
             success: function(data) {
                 $("input[name=item_name]").val("");
                 $("input[name=weight]").val("");
+                $("input[name=volume]").val("");
                 $("#addNewPackage").modal("hide");
                 getData();
             },
@@ -345,6 +348,7 @@
                     .trigger("change");
                 $("input[name=item_name_edit]").val(response[0].nama_barang);
                 $("input[name=weight_edit]").val(response[0].berat);
+                $("input[name=volume_edit]").val(response[0].volume);
                 $("#editOrder").modal("show");
             },
         });
@@ -355,6 +359,7 @@
         let vendor = $("select[name=vendor_edit]").val();
         let item_name = $("input[name=item_name_edit]").val();
         let weight = $("input[name=weight_edit]").val();
+        let volume = $("input[name=volume_edit]").val();
         $.ajax({
             url: `${base_url}/updateData`,
             type: "POST",
@@ -367,6 +372,7 @@
             success: function(response) {
                 $("input[name=item_name_edit]").val("");
                 $("input[name=weight_edit]").val("");
+                $("input[name=volume_edit]").val("");
                 $("#editOrder").modal("hide");
                 getData();
             },

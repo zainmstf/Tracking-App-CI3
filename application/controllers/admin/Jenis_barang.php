@@ -20,7 +20,7 @@ class Jenis_barang extends CI_Controller
         $data = array(
             'username' => $data->username,
             'level' => $data->level,
-            'title' => "Halaman Type Item"
+            'title' => "Type Item Page"
         );
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/jenis_barang');

@@ -847,6 +847,9 @@
                 $("#addNewOrder").modal("hide");
                 $("#addModal").modal("hide");
                 getData();
+                zmoney[0].innerHTML = rupiah(0);
+                bjmoney[0].innerHTML = rupiah(0);
+                yfmoney[0].innerHTML = rupiah(0);
             },
         });
     });
@@ -996,6 +999,9 @@
                 $("textarea[name=note_edit]").val("");
                 $("#editModal").modal("hide");
                 getData();
+                zmoney[1].innerHTML = rupiah(0);
+                bjmoney[1].innerHTML = rupiah(0);
+                yfmoney[1].innerHTML = rupiah(0);
             },
         });
     });

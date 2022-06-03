@@ -22,7 +22,7 @@ class Dashboard extends CI_Controller
             'cities' => $this->M_location->getCities(),
             'paket' => $this->M_dashboard->getDt('paket'),
             'vendor' => $this->M_dashboard->getDt('vendor'),
-            'title' => "Halaman Dashboard"
+            'title' => "Dashboard Page"
         );
         $this->load->view('template/admin_header', $data);
         $this->load->view('admin/dashboard', $data);

@@ -860,6 +860,8 @@
         });
     }
 
+
+
     function searchOrder() {
         const base_url = window.location.pathname;
         let value = $("#manage_order").val();
@@ -1066,6 +1068,9 @@
                 getLastOrder();
                 getData();
                 getMostShipping();
+                zmoney[0].innerHTML = rupiah(0);
+                bjmoney[0].innerHTML = rupiah(0);
+                yfmoney[0].innerHTML = rupiah(0);
             },
         });
     });
@@ -1227,6 +1232,9 @@
                 getLastOrder();
                 getData();
                 getMostShipping();
+                zmoney[1].innerHTML = rupiah(0);
+                bjmoney[1].innerHTML = rupiah(0);
+                yfmoney[1].innerHTML = rupiah(0);
             },
         });
     });

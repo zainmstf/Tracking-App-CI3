@@ -162,7 +162,7 @@
                                                                                                             </div>
                                                                                                             <div class="row">
                                                                                                                 <div class="col-md-6">
-                                                                                                                    <div class="form-group row">
+                                                                                                                    <div class="form-group row select2ParentEdit">
                                                                                                                         <label class="col-sm-3 col-form-label">Destination City</label>
                                                                                                                         <div class="col-sm-9 form-input">
                                                                                                                             <select class="w-100 form-control select2Edit" name="destination_city_edit">
