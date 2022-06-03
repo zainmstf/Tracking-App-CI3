@@ -53,6 +53,7 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'admin/Auth';
+$route['kurir'] = 'kurir/Auth';
 
 $route['admin/barang'] = 'admin/Barang';
 $route['admin/jenis_barang'] = 'admin/Jenis_barang';

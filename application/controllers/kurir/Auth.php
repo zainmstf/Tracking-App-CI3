@@ -3,16 +3,16 @@ class Auth extends CI_Controller
 {
     public function index()
     {
-        $data['title'] = 'Admin Login';
-        $this->load->view('admin/login', $data);
+        $this->load->view('kurir/login');
     }
     public function proses_login()
     {
         $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         if ($this->form_validation->run() == FALSE) {
-            $data['title'] = 'Admin Login';
-            $this->load->view('admin/login', $data);
+            $this->load->view('template/kurir_header');
+            $this->load->view('kurir/login');
+            $this->load->view('template/kurir_footer');
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
                 	Username atau Password tidak boleh kosong !
                 </div>');
@@ -31,19 +31,19 @@ class Auth extends CI_Controller
                     $sess_data['level'] = $ck->level;
                     $this->session->set_userdata($sess_data);
                 }
-                if ($sess_data['level'] == 'Admin') {
-                    redirect(base_url('admin/Dashboard'));
+                if ($sess_data['level'] == 'Kurir') {
+                    redirect(base_url('kurir/Dashboard'));
                 } else {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-                	Anda bukan admin !
+                	Anda bukan kurir !
                 </div>');
-                    redirect(base_url('admin'));
+                    redirect(base_url('kurir'));
                 }
             } else {
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
                 	Maaf Username atau Password Salah !
                 </div>');
-                redirect(base_url('admin'));
+                redirect(base_url('kurir'));
             }
         }
     }

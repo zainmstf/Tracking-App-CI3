@@ -5,10 +5,9 @@ class Jenis_barang extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
-        if (!isset($this->session->userdata['username'])) {
+        if (!isset($this->session->userdata['username']) || $this->session->userdata['level'] != 'Admin') {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-           Anda belum login !
+           Anda belum login sebagai admin!
           </div>');
             redirect(base_url('admin/Auth'));
         }
