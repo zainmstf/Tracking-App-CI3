@@ -32,7 +32,7 @@ class Auth extends CI_Controller
                     $this->session->set_userdata($sess_data);
                 }
                 if ($sess_data['level'] == 'Kurir') {
-                    redirect(base_url('kurir/Dashboard'));
+                    redirect(base_url('kurir/Change_status'));
                 } else {
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
                 	Anda bukan kurir !
@@ -50,6 +50,6 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect(base_url('admin'));
+        redirect(base_url('kurir'));
     }
 }

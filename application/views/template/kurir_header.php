@@ -9,13 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!-- plugins:css -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/feather/feather.css') ?>">
+
     <link rel="stylesheet" href="<?php echo base_url('assets/vendor/mdi/css/materialdesignicons.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/ti-icons/css/themify-icons.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/typicons/typicons.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url('assets/vendor/simple-line-icons/css/simple-line-icons.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/vendor/css/vendor.bundle.base.css') ?>">
-    <link rel="stylesheet" href="<?php echo base_url("assets/vendor/boxicons/css/boxicons.min.css"); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/vendor/select2/select2.min.css') ?>" />
     <link rel="stylesheet" href="<?php echo base_url('assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css') ?>">
     <!-- endinject -->
@@ -63,7 +59,7 @@
                             <img class="img-xs rounded-circle" src="<?php echo base_url('assets/images/faces/face8.jpg') ?>" alt="Profile image"> </a>
                             <p class="mb-1 mt-3 font-weight-semibold"><?php echo $username ?></p>
                         </div>
-                        <a class="dropdown-item" href="<?php echo base_url('admin/Auth/logout') ?>"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+                        <a class="dropdown-item" href="<?php echo base_url('kurir/Auth/logout') ?>"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
                     </div>
                 </li>
             </ul>
@@ -101,73 +97,11 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('/admin/Dashboard') ?>">
-                        <i class="mdi mdi-view-dashboard menu-icon"></i>
-                        <span class="menu-title">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-category">Master Data</li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/barang') ?>">
-                        <i class="mdi mdi-package menu-icon"></i>
-                        <span class="menu-title">Package</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/jenis_barang') ?>">
-                        <i class="mdi mdi-view-module menu-icon"></i>
-                        <span class="menu-title">Type Item</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/pengirim') ?>">
-                        <i class="mdi mdi-send menu-icon"></i>
-                        <span class="menu-title">Sender</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/penerima') ?>">
-                        <i class="mdi mdi-receipt menu-icon"></i>
-                        <span class="menu-title">Receipent</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/pengiriman') ?>">
-                        <i class="mdi mdi-truck-delivery menu-icon"></i>
-                        <span class="menu-title">Shipping</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/vendor') ?>">
-                        <i class="mdi mdi-account-network menu-icon"></i>
-                        <span class="menu-title">Vendor</span>
-                    </a>
-                </li>
                 <li class="nav-item nav-category">Shipping Tools</li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/print_receipt') ?>">
-                        <i class="mdi mdi-printer menu-icon"></i>
-                        <span class="menu-title">Print Receipt</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/change_status') ?>">
+                    <a class="nav-link" href="<?php echo base_url('kurir/Change_status') ?>">
                         <i class="mdi mdi-alert-box menu-icon"></i>
                         <span class="menu-title">Change Status</span>
-                    </a>
-                </li>
-                <li class="nav-item nav-category">Reports</li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/Incoming_report') ?>">
-                        <i class="mdi mdi-file-import menu-icon"></i>
-                        <span class="menu-title">Incoming Reports</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('admin/Outcoming_report') ?>">
-                        <i class="mdi mdi-file-export menu-icon"></i>
-                        <span class="menu-title">Outcoming Reports</span>
                     </a>
                 </li>
             </ul>

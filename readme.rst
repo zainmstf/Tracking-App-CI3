@@ -39,15 +39,15 @@ issues, as well as missing features.
 Installation
 ************
 
--  Download or Clone this repository
--  Import Database track-app
--  For User : Tracking-App-CI3
--  For Admin : Tracking-App-CI3/admin
+-  `Download or Clone this repository`_
+-  `Import Database track-app`_
+-  `For User : Tracking-App-CI3`_`
+-  `For Admin : Tracking-App-CI3/admin
 User : admin
-Pass : admin
--  For Kurir : Tracking-App-CI3/Kurir
+Pass : admin`_
+-  `For Kurir : Tracking-App-CI3/Kurir
 User : kurir
-Pass : kurir
+Pass : kurir`_
 
 *******
 License

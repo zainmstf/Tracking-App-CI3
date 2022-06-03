@@ -21,7 +21,7 @@
                 <div class="row w-100 mx-0">
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                            <h4>Login Admin</h4>
+                            <h4>Login Kurir</h4>
                             <h6 class="fw-light">Sign in to continue.</h6>
 
                             <form method="post" action="<?php echo base_url('kurir/Auth/proses_login') ?>" class="pt-3">

@@ -6,7 +6,7 @@ class Change_status extends CI_Controller
     {
         parent::__construct();
 
-        if (!isset($this->session->userdata['username']) || $this->session->userdata['level'] != 'Admin') {
+        if (!isset($this->session->userdata['username']) || $this->session->userdata['level'] != 'Kurir') {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
            Anda belum login sebagai admin!
           </div>');
@@ -25,9 +25,9 @@ class Change_status extends CI_Controller
             'vendor' => $this->M_dashboard->getDt('vendor'),
             'title' => "Halaman Type Item"
         );
-        $this->load->view('template/admin_header', $data);
-        $this->load->view('admin/change_status');
-        $this->load->view('template/admin_footer');
+        $this->load->view('template/kurir_header', $data);
+        $this->load->view('kurir/change_status');
+        $this->load->view('template/kurir_footer');
     }
     public function getData()
     {
