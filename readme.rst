@@ -39,8 +39,15 @@ issues, as well as missing features.
 Installation
 ************
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+-  Download or Clone this repository
+-  Import Database track-app
+-  For User : Tracking-App-CI3
+-  For Admin : Tracking-App-CI3/admin
+User : admin
+Pass : admin
+-  For Kurir : Tracking-App-CI3/Kurir
+User : kurir
+Pass : kurir
 
 *******
 License
