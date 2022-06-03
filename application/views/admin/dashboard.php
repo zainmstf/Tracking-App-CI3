@@ -860,8 +860,6 @@
         });
     }
 
-
-
     function searchOrder() {
         const base_url = window.location.pathname;
         let value = $("#manage_order").val();

@@ -88,21 +88,40 @@ class Dashboard extends CI_Controller
     public function addData()
     {
         $id_pengirim = $this->M_dashboard->getDt('pengirim');
-        $lastIdPengirim = $id_pengirim[array_key_last($id_pengirim)]->id_pengirim + 1;
+        if (count($id_pengirim) > 0) {
+            $lastIdPengirim = $id_pengirim[array_key_last($id_pengirim)]->id_pengirim + 1;
+        } else {
+            $lastIdPengirim = 1;
+        }
         $id_penerima = $this->M_dashboard->getDt('penerima');
-        $lastIdPenerima = $id_penerima[array_key_last($id_penerima)]->id_penerima + 1;
+        if (count($id_penerima) > 0) {
+            $lastIdPenerima = $id_penerima[array_key_last($id_penerima)]->id_penerima + 1;
+        } else {
+            $lastIdPenerima = 1;
+        }
         $id_barang = $this->M_dashboard->getDt('barang');
-        $lastIdBarang = $id_barang[array_key_last($id_barang)]->id_barang + 1;
+        if (count($id_barang) > 0) {
+            $lastIdBarang = $id_barang[array_key_last($id_barang)]->id_barang + 1;
+        } else {
+            $lastIdBarang = 1;
+        }
+        $id_pengiriman = $this->M_dashboard->getDt('pengiriman');
+        if (count($id_pengiriman) > 0) {
+            $lastIdPengiriman = $id_pengiriman[array_key_last($id_pengiriman)]->id_pengiriman + 1;
+        } else {
+            $lastIdPengiriman = 1;
+        }
         $no_resi = rand();
         $cResi = $this->M_dashboard->getDt('pengiriman');
-        for ($i = 0; $i < count($cResi); $i++) {
-            if ($no_resi == $cResi[$i]->no_resi) {
-                while ($no_resi == $cResi[$i]) {
-                    $no_resi = rand();
+        if (count($cResi) > 0) {
+            for ($i = 0; $i < count($cResi); $i++) {
+                if ($no_resi == $cResi[$i]->no_resi) {
+                    while ($no_resi == $cResi[$i]) {
+                        $no_resi = rand();
+                    }
                 }
             }
         }
-
         $pengirim = [
             'id_pengirim' => $lastIdPengirim,
             'nama_pengirim' => $this->input->post('sender_name'),
@@ -140,6 +159,7 @@ class Dashboard extends CI_Controller
         }
 
         $pengiriman = [
+            'id_pengiriman' => $lastIdPengiriman,
             'id_barang' => $lastIdBarang,
             'id_pengirim' => $lastIdPengirim,
             'id_penerima' => $lastIdPenerima,
@@ -153,7 +173,6 @@ class Dashboard extends CI_Controller
             'status' => 'On Process',
             'keterangan' => $keterangan,
             'tgl_order' => date('Y-m-d H:i:s'),
-            'tgl_diterima' => NULL,
             'username' => $this->session->userdata['username'],
         ];
 

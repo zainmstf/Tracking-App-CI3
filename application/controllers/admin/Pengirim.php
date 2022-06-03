@@ -35,7 +35,11 @@ class Pengirim extends CI_Controller
     public function addData()
     {
         $id_pengirim = $this->M_dashboard->getDt('pengirim');
-        $lastIdPengirim = $id_pengirim[array_key_last($id_pengirim)]->id_pengirim + 1;
+        if (count($id_pengirim) > 0) {
+            $lastIdPengirim = $id_pengirim[array_key_last($id_pengirim)]->id_pengirim + 1;
+        } else {
+            $lastIdPengirim = 1;
+        }
         $pengirim = [
             'id_pengirim' => $lastIdPengirim,
             'nama_pengirim' => $this->input->post('sender_name'),

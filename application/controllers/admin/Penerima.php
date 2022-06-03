@@ -35,7 +35,11 @@ class Penerima extends CI_Controller
     public function addData()
     {
         $id_penerima = $this->M_dashboard->getDt('penerima');
-        $lastIdPenerima = $id_penerima[array_key_last($id_penerima)]->id_penerima + 1;
+        if (count($id_penerima) > 0) {
+            $lastIdPenerima = $id_penerima[array_key_last($id_penerima)]->id_penerima + 1;
+        } else {
+            $lastIdPenerima = 1;
+        }
         $penerima = [
             'id_penerima' => $lastIdPenerima,
             'nama_penerima' => $this->input->post('receipent_name'),

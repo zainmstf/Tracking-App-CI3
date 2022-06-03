@@ -33,7 +33,11 @@ class Jenis_barang extends CI_Controller
     public function addData()
     {
         $id_paket = $this->M_master_data->getData('paket');
-        $lastIdPaket = $id_paket[array_key_last($id_paket)]->id_paket + 1;
+        if (count($id_paket) > 0) {
+            $lastIdPaket = $id_paket[array_key_last($id_paket)]->id_paket + 1;
+        } else {
+            $lastIdPaket = 1;
+        }
         $paket = [
             'id_paket' => $lastIdPaket,
             'jenis_paket' => $this->input->post('type_item'),

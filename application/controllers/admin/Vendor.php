@@ -34,7 +34,11 @@ class Vendor extends CI_Controller
     public function addData()
     {
         $id_vendor = $this->M_master_data->getData('vendor');
-        $lastIdVendor = $id_vendor[array_key_last($id_vendor)]->id_vendor + 1;
+        if (count($id_vendor) > 0) {
+            $lastIdVendor = $id_vendor[array_key_last($id_vendor)]->id_vendor + 1;
+        } else {
+            $lastIdVendor = 1;
+        }
         $vendor = [
             'id_vendor' => $lastIdVendor,
             'nama_vendor' => $this->input->post('vendor_name'),

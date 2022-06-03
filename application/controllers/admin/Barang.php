@@ -35,7 +35,11 @@ class Barang extends CI_Controller
     public function addData()
     {
         $id_barang = $this->M_master_data->getData('barang');
-        $lastIdBarang = $id_barang[array_key_last($id_barang)]->id_barang + 1;
+        if (count($id_barang) > 0) {
+            $lastIdBarang = $id_barang[array_key_last($id_barang)]->id_barang + 1;
+        } else {
+            $lastIdBarang = 1;
+        }
         $barang = [
             'id_barang' => $lastIdBarang,
             'id_vendor' => $this->input->post('vendor'),
