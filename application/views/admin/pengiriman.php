@@ -216,6 +216,14 @@
                                                                                                                 </div>
                                                                                                                 <div class="col-md-6">
                                                                                                                     <div class="form-group row">
+                                                                                                                        <label class="col-sm-3 col-form-label">Volume</label>
+                                                                                                                        <div class="col-sm-9 form-input">
+                                                                                                                            <input type="text" class="form-control" name="volume" required />
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6">
+                                                                                                                    <div class="form-group row">
                                                                                                                         <label class="col-sm-3 col-form-label">Item Type</label>
                                                                                                                         <div class="col-sm-9 form-input">
                                                                                                                             <select class="w-100 form-control select2Add" name="item_type">
@@ -242,8 +250,6 @@
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
-                                                                                                            </div>
-                                                                                                            <div class="row">
                                                                                                                 <div class="col-md-6">
                                                                                                                     <div class="form-group row">
                                                                                                                         <label class="col-sm-3 col-form-label">Qty</label>
@@ -252,6 +258,8 @@
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
+                                                                                                            </div>
+                                                                                                            <div class="row">
                                                                                                                 <div class="col-md-6">
                                                                                                                     <div class="form-group row">
                                                                                                                         <label class="col-sm-3 col-form-label">Note :</label>
@@ -501,6 +509,14 @@
                                                                                                                 </div>
                                                                                                                 <div class="col-md-6">
                                                                                                                     <div class="form-group row">
+                                                                                                                        <label class="col-sm-3 col-form-label">Volume</label>
+                                                                                                                        <div class="col-sm-9 form-input">
+                                                                                                                            <input type="text" class="form-control" name="volume_edit" required />
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6">
+                                                                                                                    <div class="form-group row">
                                                                                                                         <label class="col-sm-3 col-form-label">Item Type</label>
                                                                                                                         <div class="col-sm-9 form-input">
                                                                                                                             <select class="w-100 form-control select2Edit" name="item_type_edit">
@@ -524,6 +540,14 @@
                                                                                                                         <label class="col-sm-3 col-form-label">Insurance</label>
                                                                                                                         <div class="col-sm-9 form-input">
                                                                                                                             <input type="text" class="form-control insurance" required name="insurance_edit" />
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6">
+                                                                                                                    <div class="form-group row">
+                                                                                                                        <label class="col-sm-3 col-form-label">Qty</label>
+                                                                                                                        <div class="col-sm-9 form-input">
+                                                                                                                            <input type="number" class="form-control qty" value="1" name="qty_edit" required />
                                                                                                                         </div>
                                                                                                                     </div>
                                                                                                                 </div>
@@ -799,6 +823,7 @@
         let vendor = $("select[name=vendor]").val();
         let item_name = $("input[name=item_name]").val();
         let weight = $("input[name=weight]").val();
+        let volume = $("input[name=volume]").val();
         let type_item = $("select[name=item_type]").val();
         let shipping_cost = $("input[name=shipping_cost]").val();
         let insurance = $("input[name=insurance]").val();
@@ -822,6 +847,7 @@
                 vendor: vendor,
                 item_name: item_name,
                 weight: weight,
+                volume: volume,
                 item_type: type_item,
                 shipping_cost: shipping_cost,
                 insurance: insurance,
@@ -840,6 +866,7 @@
                 $("textarea[name=receipent_address]").val("");
                 $("input[name=item_name]").val("");
                 $("input[name=weight]").val("");
+                $("input[name=volume]").val("");
                 $("input[name=shipping_cost]").val("");
                 $("input[name=insurance]").val("");
                 $("input[name=qty]").val("1");
@@ -909,6 +936,7 @@
                     .trigger("change");
                 $("input[name=item_name_edit]").val(response[0].nama_barang);
                 $("input[name=weight_edit]").val(response[0].berat);
+                $("input[name=volume_edit]").val(response[0].volume);
                 $("select[name=item_type_edit]")
                     .val(response[0].id_paket)
                     .trigger("change");
@@ -948,6 +976,7 @@
         let vendor = $("select[name=vendor_edit]").val();
         let item_name = $("input[name=item_name_edit]").val();
         let weight = $("input[name=weight_edit]").val();
+        let volume = $("input[name=volume_edit]").val();
         let type_item = $("select[name=item_type_edit]").val();
         let shipping_cost = $("input[name=shipping_cost_edit]").val();
         let insurance = $("input[name=insurance_edit]").val();
@@ -976,6 +1005,7 @@
                 vendor: vendor,
                 item_name: item_name,
                 weight: weight,
+                volume: volume,
                 item_type: type_item,
                 shipping_cost: shipping_cost,
                 insurance: insurance,

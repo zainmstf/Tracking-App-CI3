@@ -145,6 +145,7 @@ class Dashboard extends CI_Controller
             'id_vendor' => $this->input->post('vendor'),
             'nama_barang' => $this->input->post('item_name'),
             'berat' => $this->input->post('weight'),
+            'volume' => $this->input->post('volume'),
         ];
 
 
@@ -220,6 +221,7 @@ class Dashboard extends CI_Controller
             'id_vendor' => $this->input->post('vendor'),
             'nama_barang' => $this->input->post('item_name'),
             'berat' => $this->input->post('weight'),
+            'volume' => $this->input->post('volume'),
         ];
 
         $biaya_pengiriman = $this->input->post('shipping_cost');
