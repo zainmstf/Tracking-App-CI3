@@ -16,20 +16,20 @@
       <h1 class="logo me-auto"><a href="#hero">PT Aura Abadi Logistik</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link togactive active" href="#hero">Home</a></li>
-          <li><a class="nav-link togactive" href="#about">About Us</a></li>
-          <li class="dropdown"><a class="togactive" href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link togactive scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link togactive scrollto" href="#about">About Us</a></li>
+          <li class="dropdown"><a class="togactive scrollto" href="#services"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class='nav-link' href="#services">Our Services</a></li>
-              <li><a class='nav-link' href="#transport">Service Transport</a></li>
+              <li><a class='nav-link scrollto' href="#services">Our Services</a></li>
+              <li><a class='nav-link scrollto' href="#transport">Service Transport</a></li>
             </ul>
           </li>
-          <li><a class="nav-link togactive" href="#trackorder">Track Your Order</a></li>
-          <li><a class="nav-link togactive" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link togactive scrollto" href="#trackorder">Track Your Order</a></li>
+          <li><a class="nav-link togactive scrollto" href="#testimonials">Testimonials</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#contact" class="contact-us-btn"><span class="d-md-inline">Contact</span> Us</a>
+      <a href="#contact" class="contact-us-btn scrollto"><span class="d-md-inline">Contact</span> Us</a>
     </div>
   </header>
   <!-- End Header -->
@@ -122,21 +122,21 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4><a href="#services">Jasa Pengiriman Barang</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Pengiriman Barang</a></h4>
               <p> Suatu layanan perusahaan yang bergerak di bidang pengiriman dan ekspedisi, salah satu yang banyak ditemui adalah ekspedisi barang</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-pills"></i></div>
-              <h4><a href="#services">Jasa Pengiriman Alat Berat</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Pengiriman Alat Berat</a></h4>
               <p>Menawarkan Jasa pengiriman alat berat dengan Tujuan Surabaya-Papua.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
-              <h4><a href="#services">Jasa Sewa Truk Fuso, Tronton, Trailer, Lowbat, Shefloader</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Sewa Truk Fuso, Tronton, Trailer, Lowbat, Shefloader</a></h4>
               <p>Melayani Sewa Truk Fuso, Tronton, Trailer, Lowbat, dan Shefloader</p>
             </div>
           </div>
@@ -144,7 +144,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4><a href="#services">Jasa Ekspedisi Pengiriman Kendaraan</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Ekspedisi Pengiriman Kendaraan</a></h4>
               <p>Melayani pengiriman kendaraan ke seluruh Indonesia</p>
             </div>
           </div>
@@ -152,7 +152,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-wheelchair"></i></div>
-              <h4><a href="#services">Jasa Sewa Kapal Cargo</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Sewa Kapal Cargo</a></h4>
               <p>Melayani sewa kapal cargo ke seluruh Indonesia</p>
             </div>
           </div>
@@ -160,14 +160,14 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><a href="#services">Jasa Sewa Kapal LCT (Landing Craft Tank</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Sewa Kapal LCT (Landing Craft Tank</a></h4>
               <p>Melayani sewa Kapal LCT (Landing Craft Tank</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 offset-lg-4 offset-md-6">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-notes-medical"></i></div>
-              <h4><a href="#services">Jasa Sewa Kapal Tongkang.</a></h4>
+              <h4><a href="#services" class="scrollto">Jasa Sewa Kapal Tongkang.</a></h4>
               <p>Melayani sewa kapal tongkang</p>
             </div>
           </div>
